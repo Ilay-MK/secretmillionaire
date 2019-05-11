@@ -1,14 +1,12 @@
 {
-    "name": "The Party Temptation",
-    "description": "Двухэкранный сайт для темы интим вечеринок",
+    "name": "The Great Gatsby",
+    "description": "Двухэкранный сайт привлечению клиентов на вечеринку",
     "customer": "Кирилл Янович",
     "position": "intermediary",
     "enterprise": "",
     "customerContacts": {
         "phones": [
-            {
-				
-            }
+            {}
         ],
         "emails": [
             {

@@ -28,6 +28,7 @@ function server() {
 	], pug);
 	gulp.watch('./src/sass/**/*.scss', scss);
 	gulp.watch('./src/js/**/*.js', copyJS);
+	gulp.watch('./src/fonts/**/*', copyFonts);
 	gulp.watch('./src/libs/**/*', copyLibs);
 	gulp.watch('./src/img/**/*', copyImg);
 	gulp.watch('./src/video/**/*', copyVideo);
@@ -50,7 +51,26 @@ function pug() {
 		.pipe(gulp_pug({
 			pretty: true // unminimized
 		}))
-		.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write("maps/"))
+		.pipe(gulp.dest('./build'))
+		.pipe(browserSync.stream());
+}
+
+function pug_dep() {
+	return gulp.src('./src/pug/pages/**/*.pug')
+		.pipe(
+			plumber({
+				errorHandler: notify.onError(function (err) {
+					return {
+						title: "Pug",
+						message: err.message
+					}
+				})
+			})
+		)
+		.pipe(gulp_pug({
+			pretty: false // minimized
+		}))
 		.pipe(gulp.dest('./build'))
 		.pipe(browserSync.stream());
 }
@@ -73,7 +93,30 @@ function scss() {
 			browsers: ['last 6 versions'],
 			cascade: false
 		}))
-		.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write("maps/"))
+		.pipe(gulp.dest('./build/css/'))
+		.pipe(browserSync.stream());
+}
+
+function scss_dep() {
+	return gulp.src('./src/sass/main.scss')
+		.pipe(
+			plumber({
+				errorHandler: notify.onError(function (err) {
+					return {
+						title: "Styles",
+						message: err.message
+					}
+				})
+			})
+		)
+		.pipe(gulp_scss({
+			outputStyle: 'compressed'
+		}))
+		.pipe(autoprefixer({
+			browsers: ['last 6 versions'],
+			cascade: false
+		}))
 		.pipe(gulp.dest('./build/css/'))
 		.pipe(browserSync.stream());
 }
@@ -87,6 +130,12 @@ function copyJS() {
 function copyLibs() {
 	return gulp.src('./src/libs/**/*')
 		.pipe(gulp.dest('./build/libs'))
+		.pipe(browserSync.stream());
+}
+
+function copyFonts() {
+	return gulp.src('./src/fonts/**/*')
+		.pipe(gulp.dest('./build/fonts'))
 		.pipe(browserSync.stream());
 }
 
@@ -121,6 +170,22 @@ gulp.task('build', gulp.series(
 			scss,
 			copyJS,
 			copyLibs,
+			copyFonts,
+			copyImg,
+			copyVideo,
+			copyMail_php
+		)
+	)
+);
+
+gulp.task('build_dep', gulp.series(
+		cleanBuild,
+		gulp.parallel(
+			pug_dep,
+			scss_dep,
+			copyJS,
+			copyLibs,
+			copyFonts,
 			copyImg,
 			copyVideo,
 			copyMail_php
@@ -134,6 +199,7 @@ exports.pug = pug;
 exports.scss = scss;
 exports.copyJS = copyJS;
 exports.copyLibs = copyLibs;
+exports.copyFonts = copyFonts;
 exports.copyImg = copyImg;
 exports.copyVideo = copyVideo;
 exports.copyMail_php = copyMail_php;

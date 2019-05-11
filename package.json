@@ -1,25 +1,23 @@
 {
-  "name": "ThePartyTemptation",
-  "version": "1.0.0",
-  "description": "Двухэкранный сайт для темы интим вечеринок",
-  "main": "index.html",
-  "dependencies": {
-    "jquery.maskedinput": "^1.4.1"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Gulp-training",
-  "license": "ISC"
+	"name": "The Great Gatsby",
+	"version": "2.0.0",
+	"description": "Двухэкранный сайт привлечению клиентов на вечеринку",
+	"main": "index.html",
+	"dependencies": {},
+	"devDependencies": {
+		"browser-sync": "^2.26.3",
+		"del": "^3.0.0",
+		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^6.0.0",
+		"gulp-notify": "^3.2.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-pug": "^4.0.1",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.4"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Eliot EliotMrR@gmail.com",
+	"license": "ISC"
 }
