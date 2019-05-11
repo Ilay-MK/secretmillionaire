@@ -123,36 +123,98 @@ function scss_dep() {
 
 function copyJS() {
 	return gulp.src('./src/js/**/*')
+		.pipe(
+			plumber({
+				errorHandler: notify.onError(function (err) {
+					return {
+						title: "copyJS",
+						message: err.message
+					}
+				})
+			})
+		)
 		.pipe(gulp.dest('./build/js'))
 		.pipe(browserSync.stream());
 }
 
 function copyLibs() {
 	return gulp.src('./src/libs/**/*')
+		.pipe(
+			plumber({
+				errorHandler: notify.onError(function (err) {
+					return {
+						title: "copyLibs",
+						message: err.message
+					}
+				})
+			})
+		)
 		.pipe(gulp.dest('./build/libs'))
 		.pipe(browserSync.stream());
 }
 
 function copyFonts() {
 	return gulp.src('./src/fonts/**/*')
+		.pipe(
+			plumber({
+				errorHandler: notify.onError(function (err) {
+					return {
+						title: "copyFonts",
+						message: err.message
+					}
+				})
+			})
+		)
 		.pipe(gulp.dest('./build/fonts'))
 		.pipe(browserSync.stream());
 }
 
 function copyImg() {
 	return gulp.src('./src/img/**/*')
+		.pipe(
+			plumber({
+				errorHandler: notify.onError(function (err) {
+					return {
+						title: "copyImg",
+						message: err.message
+					}
+				})
+			})
+		)
 		.pipe(gulp.dest('./build/img'))
 		.pipe(browserSync.stream());
 }
 
 function copyVideo() {
 	return gulp.src('./src/video/**/*')
+		.pipe(
+			plumber({
+				errorHandler: notify.onError(function (err) {
+					return {
+						title: "copyVideo",
+						message: err.message
+					}
+				})
+			})
+		)
 		.pipe(gulp.dest('./build/video'))
 		.pipe(browserSync.stream());
 }
 
 function copyMail_php() {
-	return gulp.src('./src/mail.php')
+	return gulp.src('./src/mail.php', {
+			allowEmpty: true
+		})
+		.pipe(
+			plumber({
+				errorHandler: notify.onError(function (err) {
+					return {
+						title: "copyMail_php",
+						message: err.message
+					}
+				})
+			})
+		)
 		.pipe(gulp.dest('./build/'))
 		.pipe(browserSync.stream());
 }
@@ -164,34 +226,32 @@ function cleanBuild() {
 /* ==================================== */
 
 gulp.task('build', gulp.series(
-		cleanBuild,
-		gulp.parallel(
-			pug,
-			scss,
-			copyJS,
-			copyLibs,
-			copyFonts,
-			copyImg,
-			copyVideo,
-			copyMail_php
-		)
+	cleanBuild,
+	gulp.parallel(
+		pug,
+		scss,
+		copyJS,
+		copyLibs,
+		copyFonts,
+		copyImg,
+		copyVideo,
+		copyMail_php
 	)
-);
+));
 
 gulp.task('build_dep', gulp.series(
-		cleanBuild,
-		gulp.parallel(
-			pug_dep,
-			scss_dep,
-			copyJS,
-			copyLibs,
-			copyFonts,
-			copyImg,
-			copyVideo,
-			copyMail_php
-		)
+	cleanBuild,
+	gulp.parallel(
+		pug_dep,
+		scss_dep,
+		copyJS,
+		copyLibs,
+		copyFonts,
+		copyImg,
+		copyVideo,
+		copyMail_php
 	)
-);
+));
 
 /* ==================================== */
 
