@@ -1,5 +1,5 @@
 {
-    "name": "The Great Gatsby",
+    "name": "TheGreatGatsby",
     "description": "Двухэкранный сайт привлечению клиентов на вечеринку",
     "customer": "Кирилл Янович",
     "position": "intermediary",
