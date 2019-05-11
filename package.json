@@ -3,7 +3,9 @@
 	"version": "2.0.0",
 	"description": "Двухэкранный сайт привлечению клиентов на вечеринку",
 	"main": "index.html",
-	"dependencies": {},
+	"dependencies": {
+		"bootstrap": "^4.3.1"
+	},
 	"devDependencies": {
 		"browser-sync": "^2.26.3",
 		"del": "^3.0.0",
