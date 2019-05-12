@@ -1,6 +1,22 @@
 #details {
+	background-color: #16181d;
+	padding-bottom: 48px;
+	padding-top: 48px;
+	text-align: center;
+}
 
-	.details {
+.details {
 
+	&--title {
+
+		&_women {
+			margin-bottom: 28px;
+		}
+
+		&_event {
+			margin-bottom: 36px;
+			margin-top: 68px;
+		}
 	}
+
 }
