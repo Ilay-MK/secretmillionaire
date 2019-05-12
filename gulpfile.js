@@ -33,6 +33,7 @@ function server() {
 	gulp.watch('./src/img/**/*', copyImg);
 	gulp.watch('./src/video/**/*', copyVideo);
 	gulp.watch('./src/mail.php', copyMail_php);
+	gulp.watch('./src/files/**/*', copyFiles);
 }
 
 function pug() {
@@ -219,6 +220,24 @@ function copyMail_php() {
 		.pipe(browserSync.stream());
 }
 
+function copyFiles() {
+	return gulp.src('./src/files/**/*', {
+			allowEmpty: true
+		})
+		.pipe(
+			plumber({
+				errorHandler: notify.onError(function (err) {
+					return {
+						title: "copyFiles",
+						message: err.message
+					}
+				})
+			})
+		)
+		.pipe(gulp.dest('./build/files'))
+		.pipe(browserSync.stream());
+}
+
 function cleanBuild() {
 	return del('./build');
 }
@@ -235,7 +254,8 @@ gulp.task('build', gulp.series(
 		copyFonts,
 		copyImg,
 		copyVideo,
-		copyMail_php
+		copyMail_php,
+		copyFiles
 	)
 ));
 
@@ -249,7 +269,8 @@ gulp.task('build_dep', gulp.series(
 		copyFonts,
 		copyImg,
 		copyVideo,
-		copyMail_php
+		copyMail_php,
+		copyFiles
 	)
 ));
 
@@ -263,6 +284,7 @@ exports.copyFonts = copyFonts;
 exports.copyImg = copyImg;
 exports.copyVideo = copyVideo;
 exports.copyMail_php = copyMail_php;
+exports.copyFiles = copyFiles;
 exports.server = server;
 exports.cleanBuild = cleanBuild;
 
