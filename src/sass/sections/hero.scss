@@ -7,11 +7,15 @@
 
 	padding-top: 32px;
 	text-align: center;
+}
 
-	.hero {
+.hero {
 
-		&--top {
-			margin-bottom: 88px;
-		}
+	&--top {
+		margin-bottom: 88px;
+	}
+
+	.title {
+		margin-bottom: 32px;
 	}
 }
