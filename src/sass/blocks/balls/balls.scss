@@ -1,5 +1,22 @@
 /// Bem Block "balls"
+/// require rhombus
 
 .balls {
 
+	&--ball {
+
+		&+.balls--ball {
+			margin-top: 36px;
+		}
+	}
+
+	&--img {
+		margin-bottom: 12px;
+	}
+
+	&--caption {
+		font-size: 14px;
+		letter-spacing: 0.26px;
+		line-height: 20px;
+	}
 }
