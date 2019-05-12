@@ -4,14 +4,16 @@
 @import "base/base";
 
 // Vendors
-
-//BT4
+// BT4
 @import "./node_modules/bootstrap/scss/bootstrap-reboot";
 @import "./node_modules/bootstrap/scss/bootstrap-grid";
 @import "./node_modules/bootstrap/scss/modal";
 
-// Blocks
+// Sections
 @import "sections/hero";
 @import "sections/footer";
+
+// Blocks
+@import "blocks/logo/logo";
 
 // Custom styles
