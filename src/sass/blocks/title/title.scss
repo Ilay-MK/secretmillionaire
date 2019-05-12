@@ -2,6 +2,18 @@
 
 .title {
 
+	&_s {
+		width: 120px;
+
+		& + .title_s {
+			margin-left: 40px;
+		}
+	}
+
+	&_m {
+		width: 243px;
+	}
+
 	&--header {
 		font-family: $font-family-header;
 		font-size: 28px;

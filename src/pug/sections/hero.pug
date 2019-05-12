@@ -1,36 +1,37 @@
 section#hero.hero
 	.container
-		.row.hero--top.justify-content-between.align-items-center
-			img.logo.logo_denim(src="img/logo/denim.png", alt="denim", height="22", width="63")
-			img.logo.logo_secret(src="img/logo/secret.png", alt="secret" height="40", width="103")
+		.row.hero--top.align-items-center
+			.col-6.col-md-4.logo-container_denim
+				img.logo.logo_denim(src="img/logo/denim.png", alt="denim", height="22", width="63").ml-n3
+			.col-6.col-md-4.logo-container_secret
+				img.logo.logo_secret(src="img/logo/secret.png", alt="secret" height="40", width="103").mr-n3.mx-md-auto.d-md-block
+
+		.row.justify-content-md-center.align-items-center
+			.col-12.col-md-7
+				.title.hero--title.mx-n3.mx-md-auto
+					h1.title--header.title--header_hero
+						| ВЕЛИКИЙ ГЭТСБИ
+					h2.title--subheader.title--subheader_hero
+						| Яркая и несдержанная закрытая вечеринка полная безудержного веселья и свободная от любых рамок
 
 		.row
-			.title.hero--title
-				h1.title--header.title--header_hero
-					| ВЕЛИКИЙ ГЭТСБИ
-				h2.title--subheader.title--subheader_hero
-					| Яркая и несдержанная закрытая вечеринка полная безудержного веселья и свободная от любых рамок
+			.col-12
+				a.btn.btn-corp(href="#").mx-n3.mx-md-auto
+					| Получить программу мероприятия
 
-		.row
-			a.btn.btn-corp(href="#")
-				| Получить программу мероприятия
-
-		.row.event-desc
-			.col
-				.title
-					.title--header.title--header_event-desc 24&ndash;25
-					.title--subheader.title--subheader_event-desc Мая 2019
-			.col
-				.title
-					.title--header.title--header_event-desc 21:00
-					.title--subheader.title--subheader_event-desc Начало
-			.col
-				.title.mt-sm-4.mt-md-0
-					.title--header.title--header_event-desc
-						| 1500 м
-						sup 2
-					.title--subheader.title--subheader_event-desc
-						| Особняк. Москва, р-н Строгино
+		.row.event-desc.justify-content-center.align-items-center
+			.title.title_s.order-md-1.mx-md-4
+				.title--header.title--header_event-desc 24&ndash;25
+				.title--subheader.title--subheader_event-desc Мая 2019
+			.title.title_s.order-md-3.mx-md-4
+				.title--header.title--header_event-desc 21:00
+				.title--subheader.title--subheader_event-desc Начало
+			.title.title_m.mt-sm-4.mt-md-0.order-md-2.mx-md-4
+				.title--header.title--header_event-desc
+					| 1500 м
+					sup 2
+				.title--subheader.title--subheader_event-desc
+					| Особняк. Москва, р-н Строгино
 
 		.row
 			.col-12

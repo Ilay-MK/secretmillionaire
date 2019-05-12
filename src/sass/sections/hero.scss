@@ -13,6 +13,20 @@
 
 	&--top {
 		margin-bottom: 88px;
+
+		@media (min-width: 1024px) {
+			margin-bottom: 220px;
+		}
+
+		.logo-container {
+
+			&_denim {
+				text-align: left;
+			}
+			&_secret {
+				text-align: right;
+			}
+		}
 	}
 
 	&--title {
