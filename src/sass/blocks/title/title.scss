@@ -5,6 +5,10 @@
 	&_s {
 		width: 120px;
 
+		@media (min-width: 1024px) {
+			width: 243px;
+		}
+
 		& + .title_s {
 			margin-left: 40px;
 		}
@@ -12,6 +16,10 @@
 
 	&_m {
 		width: 243px;
+
+		@media (min-width: 1024px) {
+			width: 250px;
+		}
 	}
 
 	&--header {
@@ -21,12 +29,24 @@
 		line-height: 28px;
 		margin-bottom: 8px;
 
+		@media (min-width: 1024px) {
+			font-size: 60px;
+			letter-spacing: 1px;
+			line-height: 64px;
+		}
+
 		&_hero {
 			font-size: 48px;
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			line-height: 52px;
 			margin-bottom: 20px;
+
+			@media (min-width: 1024px) {
+				font-size: 58px;
+				line-height: 64px;
+				margin-bottom: 16px;
+			}
 		}
 
 		&_event-desc {
@@ -34,6 +54,12 @@
 			/*line-height: 24px;*/
 			line-height: 36px;
 			margin-bottom: 6px;
+
+			@media (min-width: 1024px) {
+				font-size: 44px;
+				/*line-height: 24px;*/
+				line-height: 44px;
+			}
 		}
 
 		&_ball {
@@ -50,12 +76,26 @@
 		line-height: 20px;
 		margin-bottom: 0;
 
+		@media (min-width: 1024px) {
+			font-size: 16px;
+			letter-spacing: 0.3px;
+			line-height: 24px;
+		}
+
+		&_hero {
+
+		}
+
 		&_theme_gray {
 			color: $corporate-color-gray;
 		}
 
 		&_event-desc {
 			letter-spacing: 0.25px;
+
+			@media (min-width: 1024px) {
+				letter-spacing: 0.27px;
+			}
 		}
 
 		&_ball {
