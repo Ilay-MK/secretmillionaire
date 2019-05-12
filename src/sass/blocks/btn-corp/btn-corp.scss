@@ -1,0 +1,16 @@
+/// Bem Block "btn-corp"
+
+.btn-corp {
+	width: 280px;
+	height: 56px;
+	border: 1px solid $corporate-color-gold;
+	overflow: hidden;
+	padding: 15px;
+
+	// text
+	font-size: 14px;
+	letter-spacing: 0.26px;
+	line-height: 24px;
+	color: $body-color !important;
+	text-decoration: none !important;
+}
