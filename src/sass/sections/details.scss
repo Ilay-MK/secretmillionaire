@@ -9,8 +9,13 @@
 
 	&--title {
 
-		&_women {
+		&_women,
+		&_building {
 			margin-bottom: 28px;
+		}
+
+		&_building {
+			margin-top: 88px;
 		}
 
 		&_event {
@@ -19,4 +24,8 @@
 		}
 	}
 
+	.btn-corp {
+		margin-top: 48px;
+		margin-bottom: 26px;
+	}
 }
