@@ -8,6 +8,7 @@
 @import "./node_modules/bootstrap/scss/bootstrap-reboot";
 @import "./node_modules/bootstrap/scss/bootstrap-grid";
 @import "./node_modules/bootstrap/scss/modal";
+@import "blocks/swiper/swiper.min";
 
 // Sections
 @import "sections/hero";
@@ -22,3 +23,4 @@
 @import "blocks/rhombus/rhombus";
 
 // Custom styles
+@import "blocks/swiper/swiper-custom";
