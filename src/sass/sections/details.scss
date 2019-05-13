@@ -3,7 +3,10 @@
 	padding-bottom: 48px;
 	padding-top: 48px;
 	text-align: center;
-	overflow: hidden;
+
+	@media (max-width: 1023.98px) {
+		overflow: hidden;
+	}
 }
 
 .details {

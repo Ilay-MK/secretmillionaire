@@ -14,6 +14,29 @@
 			@media (min-width: 1024px) {
 				width: 333px;
 			}
+
+			&:before,
+			&:after {
+				@media (min-width: 1024px) {
+					content: '';
+					display: block;
+					position: absolute;
+					left: 158px;
+					width: 1px;
+					background-color: #282a39;
+					z-index: 4;
+				}
+			}
+
+			&:before {
+				height: 192px;
+				top: -224px;
+			}
+
+			&:after {
+				height: 112px;
+				bottom: -100px;
+			}
 		}
 	}
 
