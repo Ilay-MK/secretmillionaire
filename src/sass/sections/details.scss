@@ -3,9 +3,23 @@
 	padding-bottom: 48px;
 	padding-top: 48px;
 	text-align: center;
+	position: relative;
 
 	@media (max-width: 1023.98px) {
 		overflow: hidden;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		/*left: calc(50% - 272px);*/
+		margin-left: -272px;
+		background-color: rgba(20, 22, 26, 0.5);
+		width: 544px;
 	}
 }
 
