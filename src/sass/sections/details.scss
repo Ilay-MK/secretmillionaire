@@ -41,7 +41,12 @@
 	}
 
 	&--slider {
-		/*margin-top: ;*/
+
+		&_women {
+			@media (min-width: 1024px) {
+				margin-top: 56px;
+			}
+		}
 	}
 
 	.btn-corp {
