@@ -28,6 +28,10 @@
 
 		&_building {
 			margin-top: 88px;
+
+			@media (min-width: 1024px) {
+				margin-top: 118px;
+			}
 		}
 
 		&_event {

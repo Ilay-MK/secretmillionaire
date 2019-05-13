@@ -5,13 +5,28 @@
 
 	&--ball {
 
-		&+.balls--ball {
-			margin-top: 36px;
+		@media (min-width: 1024px) {
+			padding: 14px 26px;
+			width: 465px;
+			text-align: left;
+		}
+
+		& + .balls--ball {
+
+			@media (max-width: 1023.98px) {
+				margin-top: 36px;
+			}
 		}
 	}
 
 	&--img {
-		margin-bottom: 12px;
+		@media (max-width: 1023.98px) {
+			margin-bottom: 12px;
+		}
+
+		@media (min-width: 1024px) {
+			margin-right: 31px;
+		}
 	}
 
 	&--caption {
