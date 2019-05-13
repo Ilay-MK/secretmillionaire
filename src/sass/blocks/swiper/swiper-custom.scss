@@ -19,7 +19,10 @@
 	&-slide {
 		text-align: center;
 		font-size: 18px;
-		background: #fff;
+		background-color: #fff;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 		/* Center slide text vertically */
 		display: flex;
 		justify-content: center;
