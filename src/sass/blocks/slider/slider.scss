@@ -14,7 +14,8 @@
 					z-index: 3;
 
 					@media (min-width: 1024px) {
-						width: 333px;
+						/*width: 333px;*/
+						width: 0;
 					}
 
 					&:before,
@@ -59,8 +60,17 @@
 
 				@media (min-width: 1024px) {
 					height: 492px;
+				}
+
+				@media (min-width: 1024px) and (max-width: 1439.98px) {
 					width: 570px;
 				}
+
+				@media (min-width: 1440px) {
+					width: 855px;
+				}
+
+
 			}
 		}
 
