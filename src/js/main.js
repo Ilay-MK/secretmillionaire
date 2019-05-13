@@ -23,4 +23,19 @@ $(document).ready(function () {
 			prevEl: '.slider_women .slider--btn_prev',
 		},
 	});
+
+	var swiper = new Swiper('.slider_building .swiper-container', {
+		/*slidesPerView: 2,*/
+		slidesPerView: 'auto',
+		spaceBetween: 25,
+		/*effect: 'fade',*/
+		/*pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},*/
+		navigation: {
+			nextEl: '.slider_building .slider--btn_next',
+			prevEl: '.slider_building .slider--btn_prev',
+		},
+	});
 });
