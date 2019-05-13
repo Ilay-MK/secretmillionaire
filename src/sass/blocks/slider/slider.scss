@@ -76,15 +76,19 @@
 			&--btn {
 				position: absolute;
 				top: 50%;
-				top: calc(50% - 65px);
-				/*margin-top: -32.5px;*/
+				/*top: calc(50% - 46px);*/
+				margin-top: -32.5px;
+
+				@media (max-width: 1023.98px) {
+					display: none;
+				}
 
 				&_prev {
-
+					left: -46px;
 				}
 
 				&_next {
-
+					right: -46px;
 				}
 			}
 		}
