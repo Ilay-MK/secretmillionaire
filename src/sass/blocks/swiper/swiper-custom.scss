@@ -1,17 +1,37 @@
 // Swiper
 // for swiper plugin
 
-.swiper-container {
-	width: 100%;
-	height: 100%;
-}
+.swiper {
 
-.swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-	/* Center slide text vertically */
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	&-container {
+		width: 100%;
+		height: 100%;
+
+		@media (max-width: 1023.98px) {
+			overflow: visible;
+		}
+	}
+
+	&-slide {
+		width: 200px;
+		height: 316px;
+		background-color: rgba(20, 20, 21, 0.3);
+
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+		/* Center slide text vertically */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media (min-width: 1024px) {
+			width: 285px;
+			height: 432px;
+		}
+
+		&:nth-child(2n+1) {
+			align-self: flex-end;
+		}
+	}
 }
