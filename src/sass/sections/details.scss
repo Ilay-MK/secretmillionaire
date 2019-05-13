@@ -21,6 +21,10 @@
 		&_women,
 		&_building {
 			margin-bottom: 28px;
+
+			@media (min-width: 1024px) and (max-width: 1439.98px) {
+				margin-bottom: 52px;
+			}
 		}
 
 		&_women {
@@ -64,5 +68,9 @@
 	.btn-corp {
 		margin-top: 48px;
 		margin-bottom: 26px;
+
+		@media (min-width: 1024px) and (max-width: 1439.98px) {
+			margin-top: 56px;
+		}
 	}
 }

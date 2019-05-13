@@ -67,9 +67,28 @@
 		.slider--btn + .slider--btn {
 			margin-top: 40px; // 28px + 12px
 		}
+
+		.swiper-slide {
+			width: 200px;
+			height: 316px;
+
+			@media (min-width: 1024px) {
+				width: 285px;
+				height: 432px;
+			}
+
+			&:nth-child(2n+1) {
+				align-self: flex-end;
+			}
+		}
 	}
 
 	&_building {
+
+		@media (max-width: 1023.98px) {
+			margin-left: -27px;
+			margin-right: -27px;
+		}
 
 		.slider {
 
@@ -89,6 +108,33 @@
 
 				&_next {
 					right: -46px;
+				}
+			}
+		}
+
+		.swiper-slide {
+			width: 300px;
+			height: 200px;
+
+			@media (min-width: 1024px) {
+				width: 563px;
+				height: 340px;
+				margin-right: 25px !important;
+
+				&:last-child {
+					margin-right: 0 !important;
+				}
+			}
+
+			&-prev {
+				background: 1px solid red;
+
+				@media (min-width: 1024px) and (max-width: 1439.98px) {
+					right: 53px;
+				}
+
+				@media (min-width: 1440px) {
+					right: 99px;
 				}
 			}
 		}

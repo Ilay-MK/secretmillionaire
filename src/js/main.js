@@ -25,9 +25,9 @@ $(document).ready(function () {
 	});
 
 	var swiper = new Swiper('.slider_building .swiper-container', {
-		/*slidesPerView: 2,*/
+		/*slidesPerView: 1,*/
 		slidesPerView: 'auto',
-		spaceBetween: 25,
+		spaceBetween: 8,
 		/*effect: 'fade',*/
 		/*pagination: {
 			el: '.swiper-pagination',

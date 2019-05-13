@@ -17,10 +17,6 @@
 	}
 
 	&-slide {
-		width: 200px;
-		height: 316px;
-		background-color: rgba(20, 20, 21, 0.3);
-
 		text-align: center;
 		font-size: 18px;
 		background: #fff;
@@ -29,13 +25,9 @@
 		justify-content: center;
 		align-items: center;
 
-		@media (min-width: 1024px) {
-			width: 285px;
-			height: 432px;
-		}
-
-		&:nth-child(2n+1) {
-			align-self: flex-end;
+		img {
+			height: 100%;
+			width: auto;
 		}
 	}
 }
