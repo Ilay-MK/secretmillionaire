@@ -33,6 +33,10 @@
 		&_event {
 			margin-bottom: 36px;
 			margin-top: 68px;
+
+				@media (min-width: 1024px) {
+				width: 100%;
+			}
 		}
 	}
 
