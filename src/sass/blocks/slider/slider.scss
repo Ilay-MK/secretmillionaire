@@ -3,15 +3,38 @@
 .slider {
 	position: relative;
 
-	&_women {
+	&_women {}
 
+	&--title {
+
+		&-container {
+			position: relative;
+			z-index: 3;
+
+			@media (min-width: 1024px) {
+				width: 333px;
+			}
+		}
 	}
 
 	&--nav {
+		display: none;
+		width: 92px;
+		height: 196px;
+		margin-bottom: 52px;
+		margin-left: 112px;
+		overflow: hidden;
 
+		@media (min-width: 1024px) {
+			display: block;
+		}
 	}
 
 	&--wrapper {
 
+		@media (min-width: 1024px) {
+			height: 492px;
+			width: 570px;
+		}
 	}
 }
