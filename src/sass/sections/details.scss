@@ -9,9 +9,20 @@
 
 	&--title {
 
+		@media (min-width: 1024px) {
+			width: 600px;
+			text-align: left;
+		}
+
 		&_women,
 		&_building {
 			margin-bottom: 28px;
+		}
+
+		&_women {
+			@media (min-width: 1024px) {
+				margin-bottom: 50px;
+			}
 		}
 
 		&_building {
@@ -22,6 +33,10 @@
 			margin-bottom: 36px;
 			margin-top: 68px;
 		}
+	}
+
+	&--slider {
+		height: 492px;
 	}
 
 	.btn-corp {

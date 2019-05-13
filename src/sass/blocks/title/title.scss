@@ -35,6 +35,13 @@
 			line-height: 64px;
 		}
 
+		&_design {
+
+			@media (min-width: 1024px) {
+				margin-left: 26px;
+			}
+		}
+
 		&_hero {
 			font-size: 48px;
 			text-transform: uppercase;
@@ -82,9 +89,14 @@
 			line-height: 24px;
 		}
 
-		&_hero {
+		&_design {
 
+			@media (min-width: 1024px) {
+				margin-left: 112px !important; // 26px + 86px
+			}
 		}
+
+		&_hero {}
 
 		&_theme_gray {
 			color: $corporate-color-gray;
