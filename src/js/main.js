@@ -9,12 +9,18 @@ $(document).ready(function () {
 		loop: true
 	})*/
 
-	var swiper = new Swiper('.swiper-container', {
-		slidesPerView: 3,
-		spaceBetween: 30,
-		pagination: {
+	var swiper = new Swiper('.slider_women .swiper-container', {
+		/*slidesPerView: 2,*/
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		/*effect: 'fade',*/
+		/*pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
+		},*/
+		navigation: {
+			nextEl: '.slider_women .slider--btn_next',
+			prevEl: '.slider_women .slider--btn_prev',
 		},
 	});
 });
