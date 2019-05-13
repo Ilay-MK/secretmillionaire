@@ -3,61 +3,90 @@
 .slider {
 	position: relative;
 
-	&_women {}
+	&_women {
 
-	&--title {
+		.slider {
 
-		&-container {
-			position: relative;
-			z-index: 3;
+			&--title {
 
-			@media (min-width: 1024px) {
-				width: 333px;
-			}
+				&-container {
+					position: relative;
+					z-index: 3;
 
-			&:before,
-			&:after {
-				@media (min-width: 1024px) {
-					content: '';
-					display: block;
-					position: absolute;
-					left: 158px;
-					width: 1px;
-					background-color: #282a39;
-					z-index: 4;
+					@media (min-width: 1024px) {
+						width: 333px;
+					}
+
+					&:before,
+					&:after {
+						@media (min-width: 1024px) {
+							content: '';
+							display: block;
+							position: absolute;
+							left: 158px;
+							width: 1px;
+							background-color: #282a39;
+							z-index: 4;
+						}
+					}
+
+					&:before {
+						height: 192px;
+						top: -224px;
+					}
+
+					&:after {
+						height: 112px;
+						bottom: -100px;
+					}
 				}
 			}
 
-			&:before {
-				height: 192px;
-				top: -224px;
+			&--nav {
+				display: none;
+				width: 92px;
+				height: 196px;
+				margin-bottom: 52px;
+				margin-left: 112px;
+				overflow: hidden;
+
+				@media (min-width: 1024px) {
+					display: block;
+				}
 			}
 
-			&:after {
-				height: 112px;
-				bottom: -100px;
+			&--wrapper {
+
+				@media (min-width: 1024px) {
+					height: 492px;
+					width: 570px;
+				}
 			}
+		}
+
+		.slider--btn + .slider--btn {
+			margin-top: 40px; // 28px + 12px
 		}
 	}
 
-	&--nav {
-		display: none;
-		width: 92px;
-		height: 196px;
-		margin-bottom: 52px;
-		margin-left: 112px;
-		overflow: hidden;
+	&_building {
 
-		@media (min-width: 1024px) {
-			display: block;
-		}
-	}
+		.slider {
 
-	&--wrapper {
+			&--btn {
+				position: absolute;
+				top: 50%;
+				top: calc(50% - 65px);
+				/*margin-top: -32.5px;*/
 
-		@media (min-width: 1024px) {
-			height: 492px;
-			width: 570px;
+				&_prev {
+
+				}
+
+				&_next {
+
+				}
+			}
 		}
 	}
 }

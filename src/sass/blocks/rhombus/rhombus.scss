@@ -35,10 +35,6 @@
 		height: 65px;
 		margin: 14px;
 
-		& + .rhombus_slider-nav {
-			margin-top: 40px; // 28px + 12px
-		}
-
 		&:before {
 			background-color: #fff;
 		}
