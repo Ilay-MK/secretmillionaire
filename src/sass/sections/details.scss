@@ -53,6 +53,18 @@
 			@media (min-width: 1024px) {
 				margin-top: 118px;
 			}
+
+			&:after {
+				@extend %decorate-line;
+				height: 292px;
+				right: 132px;
+				bottom: -86px;
+
+				@media (min-width: 1440px) {
+					content: '';
+					display: block;
+				}
+			}
 		}
 
 		&_event {
@@ -76,6 +88,21 @@
 
 		&_building {
 			overflow: hidden;
+		}
+	}
+
+	&--balls {
+
+		&:after {
+			@extend %decorate-line;
+			height: 112px;
+			left: 176px;
+			bottom: -62px;
+
+			@media (min-width: 1440px) {
+				content: '';
+				display: block;
+			}
 		}
 	}
 

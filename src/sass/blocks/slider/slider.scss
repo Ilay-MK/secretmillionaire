@@ -20,14 +20,12 @@
 
 					&:before,
 					&:after {
+						@extend %decorate-line;
+						left: 158px;
+
 						@media (min-width: 1024px) {
 							content: '';
 							display: block;
-							position: absolute;
-							left: 158px;
-							width: 1px;
-							background-color: #282a39;
-							z-index: 4;
 						}
 					}
 
@@ -70,7 +68,17 @@
 					width: 855px;
 				}
 
+				&:after {
+					@extend %decorate-line;
+					height: 232px;
+					right: 132px;
+					bottom: -220px;
 
+					@media (min-width: 1440px) {
+						content: '';
+						display: block;
+					}
+				}
 			}
 		}
 
