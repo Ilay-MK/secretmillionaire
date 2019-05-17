@@ -1,6 +1,6 @@
 {
 	"name": "TheGreatGatsby",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "Двухэкранный сайт привлечению клиентов на вечеринку",
 	"main": "index.html",
 	"dependencies": {
