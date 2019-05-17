@@ -66,6 +66,12 @@
 
 				@media (min-width: 1440px) {
 					width: 855px;
+					opacity: 1;
+					transition: opacity 0.3s ease;
+
+					&_hidden {
+						opacity: 0;
+					}
 				}
 
 				&:after {
@@ -117,6 +123,7 @@
 				&-3 {
 					top: 60px;
 				}
+
 				&-2 {
 					top: 0;
 				}
@@ -124,9 +131,11 @@
 				&-1 {
 					left: 0;
 				}
+
 				&-2 {
 					left: 285px;
 				}
+
 				&-3 {
 					left: 570px;
 				}
@@ -145,6 +154,10 @@
 				&-next + .swiper-slide {
 					/*opacity: 1;*/
 				}
+
+				&-visible {
+					opacity: 1;
+				}
 			}
 		}
 
@@ -155,9 +168,11 @@
 					&-1 {
 						left: 285px;
 					}
+
 					&-2 {
 						left: 0;
 					}
+
 					&-3 {
 						top: 0;
 					}

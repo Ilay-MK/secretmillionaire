@@ -43,7 +43,6 @@ $(document).ready(function () {
 			init: function (swiper) {
 				var cnt = 1,
 					firstThree = true;
-				console.log('swiper initialized');
 
 				$('.slider_women .swiper-slide').each(function (i, elem) {
 					if (cnt > 3) {
@@ -51,18 +50,21 @@ $(document).ready(function () {
 						firstThree = false;
 					}
 
-					if(firstThree) $(elem).css("opacity", "1");
+					if(firstThree) $(elem).addClass("swiper-slide-visible");
 					$(elem).addClass("swiper-slide-" + cnt++);
 				});
 			},
 			slideChange: function (swiper) { //runs callback in slide change start
 				var $container = $('.slider_women');
-				$('.slider_women .swiper-wrapper').fadeTo(300, 0, function () {
+
+				$container.find('.slider--wrapper').addClass('slider--wrapper_hidden');
+
+				var timeoutID = window.setTimeout(function () {
 					$container.toggleClass("slider-inverse");
-					$container.find('.swiper-slide').css("opacity", "0");
-					$container.find('.swiper-slide-active, .swiper-slide-next, .swiper-slide-next + .swiper-slide').css("opacity", "1");
-					$(this).fadeTo(250, 1, function () {});
-				});
+					$container.find('.swiper-slide').removeClass("swiper-slide-visible");
+					$container.find('.swiper-slide-active, .swiper-slide-next, .swiper-slide-next + .swiper-slide').addClass("swiper-slide-visible");
+					$container.find('.slider--wrapper_hidden').removeClass('slider--wrapper_hidden');
+				}, 300);
 			},
 			/*slideChangeTransitionStart: function (swiper) {
 				$('.slider_women .swiper-wrapper').fadeTo(300, 0, function () {
