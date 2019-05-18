@@ -1,0 +1,21 @@
+.slider.slider_building
+	.slider--title-container
+
+	.slider--wrapper
+		// Swiper
+		.swiper-container.swiper-container_visible
+			.swiper-wrapper
+				.swiper-slide(style="background-image:url(img/building/1.jpg)")
+				.swiper-slide(style="background-image:url(img/building/2.jpg)")
+				.swiper-slide(style="background-image:url(img/building/3.jpg)")
+				.swiper-slide(style="background-image:url(img/building/4.jpg)")
+				.swiper-slide(style="background-image:url(img/building/5.jpg)")
+				.swiper-slide(style="background-image:url(img/building/6.jpg)")
+
+			// Nav
+			.slider--btn.slider--btn_prev.rhombus.rhombus_slider-nav
+				svg.rhombus--icon
+					use(xlink:href="img/sprites.svg#arrow-left")
+			.slider--btn.slider--btn_next.rhombus.rhombus_slider-nav
+				svg.rhombus--icon
+					use(xlink:href="img/sprites.svg#arrow-right")

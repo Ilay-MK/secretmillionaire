@@ -35,6 +35,13 @@
 			line-height: 64px;
 		}
 
+		&_design {
+
+			@media (min-width: 1024px) {
+				margin-left: 26px;
+			}
+		}
+
 		&_hero {
 			font-size: 48px;
 			text-transform: uppercase;
@@ -67,6 +74,15 @@
 			font-size: 44px;
 			line-height: 24px;
 		}
+
+		&_event {
+
+			@media (min-width: 1024px) {
+				font-size: 36px;
+				letter-spacing: 0.6px;
+				line-height: 44px;
+			}
+		}
 	}
 
 	&--subheader {
@@ -82,9 +98,14 @@
 			line-height: 24px;
 		}
 
-		&_hero {
+		&_design {
 
+			@media (min-width: 1024px) {
+				margin-left: 112px !important; // 26px + 86px
+			}
 		}
+
+		&_hero {}
 
 		&_theme_gray {
 			color: $corporate-color-gray;

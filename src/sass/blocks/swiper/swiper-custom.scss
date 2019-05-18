@@ -1,0 +1,36 @@
+// Swiper
+// for swiper plugin
+
+.swiper {
+
+	&-container {
+		width: 100%;
+		height: 100%;
+
+		@media (max-width: 1023.98px) {
+			overflow: visible;
+		}
+
+		&_visible {
+			overflow: visible;
+		}
+	}
+
+	&-slide {
+		text-align: center;
+		font-size: 18px;
+		background-color: transparent;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		/* Center slide text vertically */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+}
