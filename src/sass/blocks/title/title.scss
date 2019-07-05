@@ -1,0 +1,126 @@
+/// Bem Block Title
+
+.title {
+
+	&_s {
+		width: 120px;
+
+		@media (min-width: 1024px) {
+			width: 243px;
+		}
+
+		& + .title_s {
+			margin-left: 40px;
+		}
+	}
+
+	&_m {
+		width: 243px;
+
+		@media (min-width: 1024px) {
+			width: 250px;
+		}
+	}
+
+	&--header {
+		font-family: $font-family-header;
+		font-size: 28px;
+		font-weight: 400;
+		line-height: 28px;
+		margin-bottom: 8px;
+
+		@media (min-width: 1024px) {
+			font-size: 60px;
+			letter-spacing: 1px;
+			line-height: 64px;
+		}
+
+		&_design {
+
+			@media (min-width: 1024px) {
+				margin-left: 26px;
+			}
+		}
+
+		&_hero {
+			font-size: 48px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			line-height: 52px;
+			margin-bottom: 20px;
+
+			@media (min-width: 1024px) {
+				font-size: 58px;
+				line-height: 64px;
+				margin-bottom: 16px;
+			}
+		}
+
+		&_event-desc {
+			font-size: 32px;
+			/*line-height: 24px;*/
+			line-height: 36px;
+			margin-bottom: 6px;
+
+			@media (min-width: 1024px) {
+				font-size: 44px;
+				/*line-height: 24px;*/
+				line-height: 44px;
+			}
+		}
+
+		&_ball {
+			color: $corporate-color-gold;
+			font-size: 44px;
+			line-height: 24px;
+		}
+
+		&_event {
+
+			@media (min-width: 1024px) {
+				font-size: 36px;
+				letter-spacing: 0.6px;
+				line-height: 44px;
+			}
+		}
+	}
+
+	&--subheader {
+		font-size: 15px;
+		font-weight: 400;
+		letter-spacing: 0.28px;
+		line-height: 20px;
+		margin-bottom: 0;
+
+		@media (min-width: 1024px) {
+			font-size: 16px;
+			letter-spacing: 0.3px;
+			line-height: 24px;
+		}
+
+		&_design {
+
+			@media (min-width: 1024px) {
+				margin-left: 112px !important; // 26px + 86px
+			}
+		}
+
+		&_hero {}
+
+		&_theme_gray {
+			color: $corporate-color-gray;
+		}
+
+		&_event-desc {
+			letter-spacing: 0.25px;
+
+			@media (min-width: 1024px) {
+				letter-spacing: 0.27px;
+			}
+		}
+
+		&_ball {
+			letter-spacing: 0.26px;
+		}
+	}
+}

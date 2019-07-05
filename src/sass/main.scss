@@ -1,0 +1,27 @@
+// Base
+@import "inc/variables";
+@import "inc/placeholders";
+@import "base/base";
+
+// Vendors
+// BT4
+@import "./node_modules/bootstrap/scss/bootstrap-reboot";
+@import "./node_modules/bootstrap/scss/bootstrap-grid";
+@import "./node_modules/bootstrap/scss/modal";
+@import "blocks/swiper/swiper.min";
+
+// Sections
+@import "sections/hero";
+@import "sections/details";
+@import "sections/footer";
+
+// Blocks
+@import "blocks/logo/logo";
+@import "blocks/title/title";
+@import "blocks/btn-corp/btn-corp";
+@import "blocks/balls/balls";
+@import "blocks/rhombus/rhombus";
+@import "blocks/slider/slider";
+
+// Custom styles
+@import "blocks/swiper/swiper-custom";

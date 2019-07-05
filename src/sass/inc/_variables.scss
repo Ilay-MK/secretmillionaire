@@ -1,0 +1,28 @@
+$font-family-base: "PT Serif";
+$font-family-header: "Playfair Display";
+$corporate-color-gold: #d6b74b;
+$corporate-color-gold-slider-nav-disabled: #f1e087;
+$corporate-color-gray: #8f919b;
+$rhombus-bg-color: #1d1f28;
+
+$body-color: #fff;
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+	// Extra small screen / phone
+	xs: 0,
+	// Small screen / phone
+	sm: 320px,
+	// Medium screen / tablet
+	md: 1024px,
+	// Large screen / desktop
+	lg: 1440px
+);
+
+$container-max-widths: (
+	sm: 280px,
+	md: 960px,
+	lg: 1140px
+);
